@@ -19,7 +19,7 @@ from elasticsearch_dsl import Search, Q
 from elasticsearch_dsl.connections import connections
 from elasticsearch.client import IndicesClient
 from elasticsearch.helpers import bulk
-
+c
 import app.models as models
 import app.elastic as elastic
 import app.survey as survey
