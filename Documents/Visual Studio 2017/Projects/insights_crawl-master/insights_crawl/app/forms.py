@@ -70,6 +70,8 @@ class crawl_form(forms.Form):
     site_choices_field = forms.MultipleChoiceField(label='Web Site', choices=site_choices, widget=forms.CheckboxSelectMultiple, required=False)
     scrape_choices = (('market', 'Market'), ('business', 'Business'), ('product', 'Product'), ('events', 'Events'),
                       ('publications', 'Publications'), ('blog', 'Blog'))
+    #batch_choices = (('Batch Process','Batch'))
+    #batch_choices_fields = forms.Field(label='Batch', choices=batch_choices, widget=forms.CheckboxSelectMultiple, required = True)
     scrape_choices_field = forms.MultipleChoiceField(label='Scrape', choices=scrape_choices, widget=forms.CheckboxSelectMultiple, required=True)
     rss_field = forms.CharField(label='RSS Category', max_length=40, required = False, initial = '', help_text='Crawl this category')
     product_field = forms.CharField(label='Product', max_length=40, required = False, initial = '', help_text='Index this product')

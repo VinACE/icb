@@ -1,26 +1,31 @@
 
-import crawler as Crawler
+from datetime import datetime
+from datetime import time
+from datetime import timedelta
+from django.core.files import File
+import glob, os
+import pickle
+import urllib
+import requests
+from urllib.parse import urlparse
+import re
+from requests_ntlm import HttpNtlmAuth
+from pandas import Series, DataFrame
+import pandas as pd
+from bs4 import BeautifulSoup
 
-'''
-def crawl_si_site(site_choice, nrpages):
-    crawler = Crawler (site_choice, nrpages)
-    si_site = si_sites[site_choice]
-    sub_sites = si_site.sub_sites
-    site_url = si_site.site_url
-           
-    for sub_site, sub_site_url in sub_sites.items():
-        bs = crawler.read_page(sub_site_url)
-        links = crawler.get_internal_links(sub_site_url, bs)        
-        for link in links:
-             bs = crawler.read_page(link)
-             apf.pages.add(link)
-             data = apf.scrape_page_map(sub_site, link, bs)
-             apf.bulk_data.append(data)
-    
-    bulk(models.client, actions=apf.bulk_data, stats_only=True)
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Search, Q
+from elasticsearch_dsl.connections import connections
+from elasticsearch.client import IndicesClient
+from elasticsearch.helpers import bulk
 
-'''
-class CosmeticsCrawler(Crawler):
+import iCrawlBatch.batch.crawler as Crawler
+
+Cr
+
+
+class CosmeticsCrawler(site,nrpages):
 
     def get_pagination_links(self, sub_site):
         include_url = urlparse(sub_site).scheme+"://"+urlparse(sub_site).netloc
@@ -121,5 +126,33 @@ class CosmeticsCrawler(Crawler):
         return data
 
 
+def crawl_cosmetic(scrape_choices, nrpages):
+    cosmetic = CosmeticsCrawler('Cosmetics', nrpages)
+    sub_sites = {}
+    if len(scrape_choices) == 0:
+        sub_sites.add(site)
+#   for site in ['http://www.cosmeticsdesign.com/', 'http://www.cosmeticsdesign-europe.com/', 'http://www.cosmeticsdesign-asia.com/']:
+    for site_url in ['http://www.cosmeticsdesign.com/']:
+        for scrape_choice in scrape_choices:
+            if scrape_choice == 'product':
+                sub_sites['Skin-care'] = site_url + '/Product-Categories/Skin-Care'
+                sub_sites['Hair-care'] = site_url +'/Product-Categories/Hair-Care'
+            if scrape_choice == 'market':
+                sub_sites['Market-Trends'] = site_url + '/Market-Trends'
+                sub_sites['Brand-Innovation']= site_url +'/Brand-Innovation'
 
+    for sub_site, sub_site_url in sub_sites.items():
+        links = cosmetic.get_pagination_links(sub_site_url)
+        for link in links:
+            bs = cosmetic.read_page(link)
+            cosmetic.pages.add(link)
+            data = cosmetic.scrape_page_map(sub_site, link, bs)
+            cosmetic.bulk_data.append(data)
 
+    bulk(models.client, actions=cosmetic.bulk_data, stats_only=True)
+
+if __name__ == '__main__':
+
+    scrape_choices = (('market', 'Market'), ('business', 'Business'), ('product', 'Product'), ('events', 'Events'),
+                      ('publications', 'Publications'), ('blog', 'Blog'))
+    crawl_cosmetic(scrape_choices, nrpages = 10 )
