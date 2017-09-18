@@ -130,15 +130,16 @@ class CosmeticsCrawler(Crawler):
 
             box_2_tag = bs.find("div", class_="box_2")
 
-            box_2_tag = box_2_tag.text.strip('\t\n\r')
+            box_2_tag = box_2_tag.text.strip('\t\n\r\l')
 
-            if box_2_tag != None:
+            if box_2_tag:
+            # if box_2_tag != None:
 
                 pagemap.section = box_2_tag
 
             else:
 
-                pagemap.section = ''
+                pagemap.section = str('_')
 
         except:
             pass
@@ -161,7 +162,7 @@ class CosmeticsCrawler(Crawler):
                     sub_sites['Hair-care'] = site_url +'/Product-Categories/Hair-Care'
                 if scrape_choice == 'market':
                     sub_sites['Market-Trends'] = site_url + '/Market-Trends'
-                    # sub_sites['Brand-Innovation'] = site_url +'/Brand-Innovation'
+                    sub_sites['Brand-Innovation'] = site_url +'/Brand-Innovation'
         print(len(sub_sites))
         for sub_site, sub_site_url in sub_sites.items():
             links = cosmetic.get_pagination_links(sub_site_url)
@@ -175,10 +176,10 @@ class CosmeticsCrawler(Crawler):
 
         bulk(models.client, actions=cosmetic.bulk_data, stats_only=True)
 
-'''
+
 if __name__ == '__main__':
     hv = HelperVariable()
-    scrape_choices = ('product', 'market')
+    scrape_choices = ('product', 'market' ) # 'product', 'market'
     batch_crawl = CosmeticsCrawler(hv.COS_DESIGN_SITE_URL, hv.NRPAGES)
 
     # scrape_choices = (('market', 'Market'), ('business', 'Business'), ('product', 'Product'), ('events', 'Events'),
@@ -186,4 +187,4 @@ if __name__ == '__main__':
 
     batch_crawl.crawl_cosmetic(scrape_choices, nrpages=1)
 
-'''
+

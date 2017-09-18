@@ -196,7 +196,7 @@ class PageMap():
     posted_date = str
     site = str
     sub_site = str
-    section = str
+    section = ''
     title = str
     url = str
     page = str
