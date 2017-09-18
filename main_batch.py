@@ -19,10 +19,10 @@ class InsightBatchCrawl(object):
     def start_batch(self):
 
         apf_batch_crawl = AFPCrawler(self.hv.APF_SITE_URL, self.hv.NRPAGES)
-        # print(self.hv.APF_SCRAPE_CHOICES)
-        # print(type(self.hv.APF_SCRAPE_CHOICES))
-        self.hv.APF_SCRAPE_CHOICES = ['blog', 'publications']  # publications
         apf_batch_crawl.crawl_apf(self.hv.APF_SCRAPE_CHOICES, self.hv.NRPAGES)
+        cosmetics_batch_crawl = CosmeticsCrawler(self.hv.COS_DESIGN_SITE_URL, self.hv.NRPAGES)
+        cosmetics_batch_crawl.crawl_cosmetic(self.hv.COS_SCRAPE_CHOICES, self.hv.NRPAGES)
+
 
 
 if __name__ == '__main__':

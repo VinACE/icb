@@ -11,6 +11,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch/file.txt" afterPath="$PROJECT_DIR$/batch/file.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch/icrawl_cosmetics.py" afterPath="$PROJECT_DIR$/batch/icrawl_cosmetics.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/batch/models.py" afterPath="$PROJECT_DIR$/batch/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_batch.py" afterPath="$PROJECT_DIR$/main_batch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="main_batch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_batch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_batch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="179">
+              <caret line="22" column="76" lean-forward="false" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
               <folding>
                 <element signature="e#308#356#0" expanded="true" />
               </folding>
@@ -36,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icrawl_cosmetics.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icrawl_cosmetics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch/icrawl_cosmetics.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
-              <caret line="164" column="81" lean-forward="true" selection-start-line="164" selection-start-column="81" selection-end-line="164" selection-end-column="81" />
+              <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
               <folding>
                 <element signature="e#1#30#0" expanded="true" />
               </folding>
@@ -150,11 +161,11 @@
         <option value="$PROJECT_DIR$/helper/helpervariable.py" />
         <option value="$PROJECT_DIR$/helper/config.ini" />
         <option value="$PROJECT_DIR$/batch/icrawl_apf.py" />
-        <option value="$PROJECT_DIR$/main_batch.py" />
         <option value="$PROJECT_DIR$/config.ini" />
         <option value="$PROJECT_DIR$/batch/config.ini" />
         <option value="$PROJECT_DIR$/batch/models.py" />
         <option value="$PROJECT_DIR$/batch/icrawl_cosmetics.py" />
+        <option value="$PROJECT_DIR$/main_batch.py" />
       </list>
     </option>
   </component>
@@ -233,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.icrawl_cosmetics">
+  <component name="RunManager" selected="Python.main_batch (1)">
     <configuration name="configmanager" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -328,8 +339,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.icrawl_cosmetics" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main_batch (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main_batch (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.icrawl_cosmetics" />
         <item index="2" class="java.lang.String" itemvalue="Python.icrawl_apf" />
         <item index="3" class="java.lang.String" itemvalue="Python.helpervariable" />
         <item index="4" class="java.lang.String" itemvalue="Python.configmanager" />
@@ -662,6 +673,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,13 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -728,22 +735,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_batch.py">
+    <entry file="file://$PROJECT_DIR$/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="e#308#356#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="185">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/batch/icrawl_cosmetics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="164" column="81" lean-forward="true" selection-start-line="164" selection-start-column="81" selection-end-line="164" selection-end-column="81" />
+          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding>
             <element signature="e#1#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_batch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="22" column="76" lean-forward="false" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+          <folding>
+            <element signature="e#308#356#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -176,7 +176,7 @@ class CosmeticsCrawler(Crawler):
 
         bulk(models.client, actions=cosmetic.bulk_data, stats_only=True)
 
-
+'''
 if __name__ == '__main__':
     hv = HelperVariable()
     scrape_choices = ('product', 'market' ) # 'product', 'market'
@@ -188,3 +188,4 @@ if __name__ == '__main__':
     batch_crawl.crawl_cosmetic(scrape_choices, nrpages=1)
 
 
+'''
