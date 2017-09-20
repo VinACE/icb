@@ -9,6 +9,7 @@
 from helper.helpervariable import HelperVariable
 from batch.icrawl_cosmetics import  CosmeticsCrawler
 from batch.icrawl_apf import AFPCrawler
+from batch.icrawl_contagious import  ContagiousCrawler
 
 
 class InsightBatchCrawl(object):
@@ -18,11 +19,12 @@ class InsightBatchCrawl(object):
 
     def start_batch(self):
 
-        apf_batch_crawl = AFPCrawler(self.hv.APF_SITE_URL, self.hv.NRPAGES)
-        apf_batch_crawl.crawl_apf(self.hv.APF_SCRAPE_CHOICES, self.hv.NRPAGES)
-        cosmetics_batch_crawl = CosmeticsCrawler(self.hv.COS_DESIGN_SITE_URL1, self.hv.NRPAGES)
-        cosmetics_batch_crawl.crawl_cosmetic(self.hv.COS_SCRAPE_CHOICES, self.hv.NRPAGES)
-
+        # apf_batch_crawl = AFPCrawler(self.hv.APF_SITE_URL, self.hv.NRPAGES)
+        # apf_batch_crawl.crawl_apf(self.hv.APF_SCRAPE_CHOICES, self.hv.NRPAGES)
+        # cosmetics_batch_crawl = CosmeticsCrawler(self.hv.COS_DESIGN_SITE_URL, self.hv.NRPAGES)
+        # cosmetics_batch_crawl.crawl_cosmetic(self.hv.COS_SCRAPE_CHOICES, self.hv.NRPAGES)
+        contagious_batch_crawl = ContagiousCrawler(self.hv.CONTAGIOUS_SITE_URL, self.hv.NRPAGES)
+        contagious_batch_crawl.crawl_contagious(self.hv.CONTAGIOUS_SCRAPE_CHOICES, self.hv.NRPAGES)
 
 
 if __name__ == '__main__':

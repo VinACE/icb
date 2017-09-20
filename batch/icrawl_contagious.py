@@ -151,7 +151,7 @@ class ContagiousCrawler(Crawler):
 
 
 
-
+'''
 if __name__ == '__main__':
     # hv = HelperVariable()
     # batch_crawl = Crawler()
@@ -162,3 +162,4 @@ if __name__ == '__main__':
     contagious_c = ContagiousCrawler('https://www.contagious.com/', nrpages=2)
     contagious_c.crawl_contagious(scrape_choices, nrpages=100)
 
+'''
