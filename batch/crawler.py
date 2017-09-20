@@ -40,13 +40,14 @@ class Crawler(object):
     bulk_data = []
     nrpages = 50
 
-    """
+    '''
     def __init__(self, site, nrpages):
         self.site = site
         self.nrpages = nrpages
-    """
+    '''
     # read the content of a page into BeautifulSoup
-    def read_page(self, url):
+    # def read_page(self, url):
+    def read_page(url):
 
         bs = BeautifulSoup('')
         try:
